@@ -153,7 +153,7 @@ All Notable changes to `laravel-modules` will be documented in this file.
 
 ### Changed
 
-- Generated emails are now generated in the `Emails` folder by default
+- Generated mails are now generated in the `Mail` folder by default
 
 ## 0.13.0 - 2016-09-08
 
