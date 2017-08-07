@@ -30,7 +30,7 @@ return [
             'routes' => 'Http/routes.php',
             'views/index' => 'Resources/views/index.blade.php',
             'views/master' => 'Resources/views/layouts/master.blade.php',
-            'scaffold/config' => 'Config/config.php',
+            'scaffold/config' => 'config/config.php',
             'composer' => 'composer.json',
         ],
         'replacements' => [
@@ -94,7 +94,7 @@ return [
 
         'generator' => [
             'assets' => 'Assets',
-            'config' => 'Config',
+            'config' => 'config',
             'command' => 'Console',
             'event' => 'Events',
             'listener' => 'Listeners',
