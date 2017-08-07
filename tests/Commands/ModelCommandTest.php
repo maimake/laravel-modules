@@ -34,7 +34,7 @@ class ModelCommandTest extends BaseTestCase
     {
         $this->artisan('module:make-model', ['model' => 'Post', 'module' => 'Blog']);
 
-        $this->assertTrue(is_file($this->modulePath . '/Entities/Post.php'));
+        $this->assertTrue(is_file($this->modulePath . '/Models/Post.php'));
     }
 
     /** @test */
@@ -42,7 +42,7 @@ class ModelCommandTest extends BaseTestCase
     {
         $this->artisan('module:make-model', ['model' => 'Post', 'module' => 'Blog']);
 
-        $file = $this->finder->get($this->modulePath . '/Entities/Post.php');
+        $file = $this->finder->get($this->modulePath . '/Models/Post.php');
 
         $this->assertEquals($this->expectedContent(), $file);
     }
@@ -52,7 +52,7 @@ class ModelCommandTest extends BaseTestCase
     {
         $this->artisan('module:make-model', ['model' => 'Post', 'module' => 'Blog', '--fillable' => 'title,slug']);
 
-        $file = $this->finder->get($this->modulePath . '/Entities/Post.php');
+        $file = $this->finder->get($this->modulePath . '/Models/Post.php');
 
         $this->assertTrue(str_contains($file, "protected \$fillable = [\"title\",\"slug\"];"));
     }
@@ -97,7 +97,7 @@ class ModelCommandTest extends BaseTestCase
         return <<<TEXT
 <?php
 
-namespace Modules\Blog\Entities;
+namespace Modules\Blog\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
